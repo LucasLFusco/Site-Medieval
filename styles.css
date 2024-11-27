@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+/* Menu lateral */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    background-color: #23438400;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transform: translateX(140px); /* Menu escondido inicialmente */
+    transition: transform 0.3s ease;
+}
+
+/* Menu aparece ao passar o mouse sobre o menu */
+header:hover {
+    transform: translateX(0);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul li {
+    width: 100%;
+}
+
+nav a {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16pt;
+    text-align: center;
+    border-bottom: 1px solid #1a346b46;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: #477dbf;
+    transform: scale(1.05);
+}
+
+main {
+    margin-left: 40px;
+    padding: 20px;
+}
+
+/* Estilo do menu hambúrguer */
+.menu-toggle {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 10; /* Coloca o menu hambúrguer acima do conteúdo */
+    transition: opacity 0.3s ease;
+}
+
+.line {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(254, 254, 255, 0.863);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efeito de desaparecer do hambúrguer */
+header:hover .menu-toggle {
+    opacity: 0; /* Desaparece o hambúrguer quando o menu aparece */
+}
+
+/* Efeito de transformação das linhas ao passar o mouse */
+.menu-toggle:hover .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Linha superior rotaciona */
+}
+
+.menu-toggle:hover .line:nth-child(2) {
+    opacity: 0; /* Linha do meio desaparece */
+}
+
+.menu-toggle:hover .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Linha inferior rotaciona */
+}
+
+/* Estilos adicionais */
+h2 {
+    color: #234484;
+}
+.bem-vindo{
+    position: absolute;
+    top: 20%;
+    left: 30px;
+}
+
+.explore {
+    font-family: "Mr Dafoe", cursive;
+    text-align: center;
+    font-size: 20pt;
+    color: rgb(184, 134, 11);
+    margin-top: 130px;
+}
+
+.texto {
+    margin: 30px;
+    color: #333;
+}
+
+footer {
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    color: white;
+}
+
+
+/* IMAGENS */
+ul.galeria{
+    width: 80vw;
+    height: 125vh;
+    margin: 0 auto;
+    overflow: hidden;
+    list-style: none;
+    columns: 3;
+}
+ul.galeria li{
+    float: left;
+    width:  200px;
+    height: 161px;
+    margin: 37px 12px;
+    border: 5px solid rgba(173, 171, 171, 0.63);
+    /* border-radius: 100px; */
+    background-color: rgba(255, 255, 255, 0.986);
+    box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+    transition: all .4s ease-in;
+}
+ul.galeria li:hover{
+    transform: scale(1.5);
+}
+
+
+ul.galeria li span{
+    /* opacity: 0; */
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    /* background-color: rgba(31, 15, 255, 0.3); */
+    font-size: 10pt;
+    line-height: 27px;
+    padding: 5px;
+    background-image: linear-gradient(45deg, black, transparent);
+}
+ul.galeria li:hover span{
+    opacity: 1;
+}
+
+
+ul.galeria li#foto01{
+    background: url(img/Biscoitos-de-Especiarias.jpg);
+    background-position: 10% 10%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul.galeria li#foto01:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul.galeria li#foto02{
+    background: url(img/Carne-com-legumes-na-cerveja.png);
+    background-position: 10% 10%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul.galeria li#foto02:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul.galeria li#foto03{
+    background: url(img/Coelho-em-Molho-de-Vinho-Doce-e-Passas-de-Uva.jpg);
+    background-position: 10% 10%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul.galeria li#foto03:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul.galeria li#foto04{
+    background: url(img/Doce-mesopotâmia.png);
+    background-position: 10% 10%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul.galeria li#foto04:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul.galeria li#foto05{
+    background: url(img/Empadas-de-Carne.jpg);
+    background-position: 10% 10%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul.galeria li#foto05:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul.galeria li#foto06{
+    background: url(img/Galinha-Mourisca.png);
+    background-position: 10% 10%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul.galeria li#foto06:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul.galeria li#foto07{
+    background: url(img/Gehalbirte_Ayer-Ovos_Recheados.jpeg);
+    background-position: 10% 10%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul.galeria li#foto07:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul.galeria li#foto08{
+    background: url(img/Tarte-de-Bry.jpeg);
+    background-position: 10% 10%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul.galeria li#foto08:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul.galeria li#foto09{
+    background: url(img/Torta-de-Amêndoas.jpeg);
+    background-position: 10% 10%;
+    background-size: 400px 400px;
+    background-color: white;
+}
+ul.galeria li#foto09:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+/* CONTATO */
+.filtrar{
+    position: absolute;
+    top: 20%;
+    left: 75px;
+}
+.espaco{
+    height: 35vh;
+}
+#filtroForm{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+/* Estilos para o formulário de filtro */
+h2{
+    text-align: left;
+    color: rgb(248, 248, 248);
+    font-size: 13pt;
+}
+form {
+    margin: 40px 20px;
+    text-align: center;
+    color: white;
+}
+.filtrar{
+    text-align: left;
+    color: rgb(248, 248, 248);
+    font-size: 13pt;
+    
+}
+label {
+    margin: 14px 0px;
+    background-image: linear-gradient(45deg, rgba(48, 16, 194, 0.664), transparent);
+}
+#tipoPrato{
+    width: 90px;
+    height: 25px;
+}
+#ingrediente{
+    width: 200px;
+    height: 25px;
+}
+button {
+    background-color: #18181800;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2a20b9a1;
+}
+#resultadoFiltro{
+    /* text-align: center;
+    display: flex; */
+    margin: auto;
+}
+#resultadoFiltro h3,p{
+    text-align: center;
+}
+
+#resultadoFiltro div {
+    background-color: #d6d4d086;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 50px;
+    text-align: justify;
+    width: 90%;
+}
+
+
+/* CONTATO */
+.espaco1{
+    height: 20vh;
+}
+
+.contato h2{
+    margin-left: 40px;
+}
+.contato p{
+    color: white;
+    margin: 60px auto;
+}
+.informacoes-contato{
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(45deg, black, transparent);
+    width: 40vw;
+    margin: auto;
+    padding: 5px 10px;
+}
+.informacoes-contato h3{
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bolder;
+}
+.informacoes-contato ul{
+    list-style: none;
+}
+.informacoes-contato li{
+    margin-top: 10px;
+}
+.informacoes-contato a{
+    list-style: none;
+    color: white;
+}
+.enviar-msg{
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+
+.formulario-contato{
+    width: 30vw;
+    margin: auto;
+}
+
+.form-contato{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#nome, #email, #mensagem{
+    width: 70%;
+}
+
+
+
+
+
+/* video em background */
+#videoBG{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    object-fit: cover;
+    
+}
+@media (min-aspect-ratio: 16/9){
+    #videoBG{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    #videoBG{
+        width: auto;
+        height: 100%;
+    }
+}
